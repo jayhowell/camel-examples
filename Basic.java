@@ -11,7 +11,7 @@ public class Basic extends RouteBuilder {
           .constant("Java")
         .setBody()
           .simple("Hello World! Camel K route written in ${header.example}.")
-        .to("log:info");
+        .to("seda:log2SPlunk_shared");
       
   }
 }
